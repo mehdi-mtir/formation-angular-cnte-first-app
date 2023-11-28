@@ -13,4 +13,8 @@ export class AppComponent {
   sayHello(){
     this.show = !this.show;
   }
+
+  afficherMessage(message : string){
+    console.log(message);
+  }
 }

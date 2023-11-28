@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 
 @Component({
@@ -6,5 +6,16 @@ import { Component } from "@angular/core";
   templateUrl : './first.component.html'
 })
 export class FirstComponent{
+  @Input() tabMois? : string[];
+  @Output() sendMessageToParent = new EventEmitter<string>();
+  message = '';
+
+  ajouterMois(mois : string){
+    this.tabMois?.push(mois);
+  }
+
+  envoyerMessage(){
+    this.sendMessageToParent.emit(this.message);
+  }
 
 }

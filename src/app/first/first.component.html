@@ -1,2 +1,6 @@
 <h1>First component</h1>
+<p *ngFor="let m of tabMois">{{m}}</p>
 <app-second></app-second>
+
+<input type="text" [(ngModel)]="message" />
+<button (click)="envoyerMessage()" >send Message</button>

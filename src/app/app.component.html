@@ -15,7 +15,6 @@
   </ul>
 </div>
 
-<app-first></app-first>
-<app-first></app-first>
-<app-first></app-first>
-<app-second></app-second>
+<app-first (sendMessageToParent)="afficherMessage($event)" [tabMois]="mois"></app-first>
+
+
